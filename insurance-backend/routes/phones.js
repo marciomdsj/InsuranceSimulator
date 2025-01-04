@@ -3,9 +3,9 @@ const router = express.Router();
 
 // Mock de dados de celulares
 const phones = [
-    { brand: 'Samsung', model: 'Galaxy S21', price: 3500 },
-    { brand: 'Apple', model: 'iPhone 13', price: 5000 },
-    { brand: 'Xiaomi', model: 'Redmi Note 10', price: 1500 }
+    { brand: 'Samsung', model: 'iPhone 14 Plus', price: 4500 },
+    { brand: 'Apple', model: 'iPhone 15', price: 5000 },
+    { brand: 'Xiaomi', model: 'Redmi Note 10', price: 2500 }
 ];
 
 // Endpoint para buscar celulares por marca e modelo

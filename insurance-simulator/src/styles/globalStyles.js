@@ -49,7 +49,7 @@ const myGlobalStyles = createGlobalStyle `
     }
 
     .introContainer {
-        margin-left:15%;
+        margin-left:6%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -123,12 +123,13 @@ const myGlobalStyles = createGlobalStyle `
     }
 
     .sectionContainer{  
+        position:absolute;
         border-radius:20px;
         background: linear-gradient(to bottom, #e6f7ff 0%, #b3e0ff 50%, #e6f7ff 100%);
-        margin-top:-300px;
+        margin-top:-250px;
         display:flex;
         flex-direction:column;
-        margin-left:60%;
+        margin-left:65%;
         width:340px;
     }
 
@@ -156,6 +157,7 @@ const myGlobalStyles = createGlobalStyle `
 }
 
 .card { 
+    margin-bottom:10px;
     display:flex;
     justify-content:space-between;
     background-color: #f9f9f9;
@@ -167,6 +169,86 @@ const myGlobalStyles = createGlobalStyle `
     text-align: center;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
+
+.text-container {
+    margin-left:6%;
+    width: auto;
+    display: inline-block;
+    margin-top: 150px;
+    position: relative;
+    cursor: pointer;
+}
+
+.highlight-text {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.bigBorderText {   
+    
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    width: 200px;
+    max-width: 300px;
+    border: solid 3px black;
+    background-color: white;
+    border-radius: 25px;
+    position: relative;
+    margin-bottom:25px;
+}
+
+.bigBorderText:after {
+    content: '';
+    position: absolute;
+    bottom: -20px; /* A cauda estará no fundo */
+    left: 10px; /* A cauda começa do lado esquerdo, mas vai percorrendo */
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid black;
+    animation: moveTail 2s steps(60) forwards; /* Animação para mover a cauda */
+}
+
+/* Animação para a digitação do texto */
+@keyframes typing {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+
+@keyframes moveTail {
+    0% {
+        left: 10px; /* Começa a cauda na posição inicial */
+    }
+    100% {
+        left: 75%; /* Move a cauda para o final da div */
+    }
+}
+
+.additional-text {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    width: 300px;
+    animation: typing 2s steps(60) forwards; /* A animação de digitação agora dura 2s */
+}
+
+
 
 .card h4 {
     margin-bottom: 10px;

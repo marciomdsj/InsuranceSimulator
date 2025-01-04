@@ -5,7 +5,7 @@ import { SubTitle, Title } from './styles';
 function Introduction() {
     return (
         <>
-            <Title>Welcome to Insurance Simulator builded by Me.</Title>
+            <Title>Insurance Simulator</Title>
                 <div className="introContainer">
                     <div className="helpText">
                         <div className="step">

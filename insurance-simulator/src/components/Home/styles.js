@@ -20,6 +20,7 @@ export const StyledInput = styled.input`
 `
 
 export const StyledSelect = styled.select`
+
     height:50px;
     width:300px;
     -webkit-appearance: none;
@@ -33,7 +34,10 @@ export const StyledSelect = styled.select`
     box-sizing: border-box;
     background-color:#f5f5f5;
     
+    
 `
+
+
 
 export const Form = styled.div`
     display: flex;

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { SubTitle, SimulatorButton, Form, StyledSelect } from './styles';
+import SelectComponent from './selectComponent';
+import Improvements from './improvements';
 
 function Sections() {
     const baseRates = {
@@ -8,6 +10,12 @@ function Sections() {
         laptop: 0.04,
         car: 0.05,
     };
+
+    const assetOptions = [
+        { value: 'cellphone', label: 'Cellphone' },
+        { value: 'car', label: 'Car' },
+        { value: 'laptop', label: 'Laptop' },
+      ];
     
     const [assetType, setAssetType] = useState('');
     const [result, setResult] = useState(null);
@@ -84,20 +92,13 @@ function Sections() {
                 <h2>Simulator</h2>
             </div>
             <Form>
-                <div className="lateralLabel">
-                    <label>
-                        <StyledSelect
-                            value={assetType}
-                            onChange={handleAssetTypeChange}
-                        >
-                            <option value="">Select an asset type</option>
-                            <option value="cellphone">Cellphone</option>
-                            <option value="car">Car</option>
-                            <option value="laptop">Laptop</option>
-                        </StyledSelect>
-                    </label>
-                </div>
-            </Form>
+        <SelectComponent
+          value={assetType}
+          onChange={handleAssetTypeChange}
+          options={assetOptions} // Passando as opções corretamente
+          placeholder="Select an asset type"
+        />
+      </Form>
             <br />
             <br />
 
@@ -146,7 +147,10 @@ function Sections() {
                     <p>Estimated insurance value is: R$ {result.toFixed(2)} </p>
                 </div>
             )}
+            
+            
         </div>
+        
     );
 }
 

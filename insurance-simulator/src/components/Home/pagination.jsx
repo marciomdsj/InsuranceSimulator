@@ -1,6 +1,7 @@
 import Introduction from './introduction';
 import Sections from './sections';
 import Footer from './footer';
+import Improvements from './improvements'
 
 
 function Pagination(){
@@ -9,8 +10,9 @@ function Pagination(){
                 <div className="content">
                     
                         <Introduction /> 
-              
+
                     <Sections /> 
+                    <Improvements />
                 </div>
                 <Footer />
             </div>
