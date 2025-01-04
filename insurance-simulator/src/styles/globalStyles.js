@@ -205,14 +205,14 @@ const myGlobalStyles = createGlobalStyle `
 .bigBorderText:after {
     content: '';
     position: absolute;
-    bottom: -20px; /* A cauda estará no fundo */
-    left: 10px; /* A cauda começa do lado esquerdo, mas vai percorrendo */
+    bottom: -20px;
+    left: 10px;
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 20px solid black;
-    animation: moveTail 2s steps(60) forwards; /* Animação para mover a cauda */
+    animation: moveTail 2s steps(60) forwards;
 }
 
 /* Animação para a digitação do texto */

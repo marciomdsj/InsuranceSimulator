@@ -53,7 +53,7 @@ function Sections() {
 
         const selectedRate = baseRates['laptop'];
         const calculatedInsurance = laptop.price * selectedRate;
-        setResult(calculatedInsurance); // Atualiza o valor do seguro
+        setResult(calculatedInsurance);
     }
 
     // Função que será chamada ao selecionar um tipo de ativo
@@ -80,10 +80,10 @@ function Sections() {
     const handlePhoneSelect = (phone) => {
         setSelectedPhone(phone);
 
-        // Calcular o seguro com base no preço do celular e o baseRate
-        const selectedRate = baseRates['cellphone']; // Já que é um celular
+       
+        const selectedRate = baseRates['cellphone']; 
         const calculatedInsurance = phone.price * selectedRate;
-        setResult(calculatedInsurance); // Atualiza o valor do seguro
+        setResult(calculatedInsurance); 
     };
 
     return (
@@ -95,14 +95,14 @@ function Sections() {
         <SelectComponent
           value={assetType}
           onChange={handleAssetTypeChange}
-          options={assetOptions} // Passando as opções corretamente
+          options={assetOptions} 
           placeholder="Select an asset type"
         />
       </Form>
             <br />
             <br />
 
-            {/* Exibir os celulares encontrados pela API */}
+ 
             {phones.length > 0 && (
                 <div className="cardContainer">
                     <h3>Available Phones:</h3>

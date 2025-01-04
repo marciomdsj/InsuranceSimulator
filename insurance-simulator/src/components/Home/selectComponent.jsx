@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyledSelect } from './styles'; // Importando o StyledSelect estilizado
+import { StyledSelect } from './styles';
 
 function SelectComponent({ value, onChange, options, placeholder }) {
   return (
