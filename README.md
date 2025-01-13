@@ -10,8 +10,8 @@ This project is a web-based insurance simulator built with ReactJS. It allows us
 ## Tech Stack
 - **Frontend**: ReactJS, HTML, CSS
 - **State Management**: React hooks
-- **Styling**: CSS, Flexbox, Grid
-- **Tools**: Create React App
+- **Styling**: CSS
+- **Tools**: Vite
 
 ## Installation
 
