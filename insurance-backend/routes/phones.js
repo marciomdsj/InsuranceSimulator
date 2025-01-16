@@ -3,7 +3,7 @@ const router = express.Router();
 
 // Mock de dados de celulares
 const phones = [
-    { brand: 'Samsung', model: 'iPhone 14 Plus', price: 4500 },
+    { brand: 'Samsung', model: 'Galaxy S24', price: 4500 },
     { brand: 'Apple', model: 'iPhone 15', price: 5000 },
     { brand: 'Xiaomi', model: 'Redmi Note 10', price: 2500 }
 ];
